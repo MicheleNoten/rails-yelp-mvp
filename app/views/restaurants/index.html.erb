@@ -1,0 +1,9 @@
+<div class='container'>
+  <h1> Welcome to Yelp 🌯 </h1>
+  <ul>
+    <% @restaurants.each do |restaurant| %>
+      <li><%= link_to restaurant.name, restaurant_path(restaurant) %></li>
+    <% end %>
+  </ul>
+    <button type="button" class="btn btn-tertiary"><%= link_to "➕🌯 New Restaurant", new_restaurant_path  %></button>
+</div>
